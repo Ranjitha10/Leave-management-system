@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<!--
+Template Name: Academic Education V2
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html>
+<head>
+<title>LMS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top" style="background:#d9d9d9" >
+<?php
+			session_start();
+			if( !(isset($_SESSION['username'])) )
+				header("Location: admin_login1.php");
+		?>
+		
+		<?php
+			
+				$con=@mysql_connect("localhost","root","");
+			if(!$con){return false;}
+			if(!mysql_select_db("leave_man",$con)){return false;}
+			$usr=$_SESSION["username"];
+			$query="SELECT title,f_name,l_name FROM staff WHERE staff_id='$usr'";
+			$result=mysql_query($query);
+			$row=mysql_fetch_assoc($result);
+			echo  $row["title"] . " " . $row["f_name"] . " " . $row["l_name"] ;?>
+			<?php
+			
+				$con=@mysql_connect("localhost","root","");
+			if(!$con){return false;}
+			if(!mysql_select_db("leave_man",$con)){return false;}
+			$usr=$_SESSION["username"];
+			$query="SELECT title,f_name,l_name FROM staff WHERE staff_id='$usr'";
+			$result=mysql_query($query);
+			$row=mysql_fetch_assoc($result);
+			echo  $row["title"] . " " . $row["f_name"] . " " . $row["l_name"] ;?>
+			<!-- ################################################################################################ -->
+<div class="wrapper row0" style="background:#d9d9d9">
+  <div id="topbar" class="clear"> 
+    <!-- ################################################################################################ -->
+    <nav>
+      <ul>
+        <li style="color:blue" ></a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ --> 
+  </div>
+</div>
+<!-- ################################################################################################ --> 
+<!-- ################################################################################################ --> 
+<!-- ################################################################################################ -->
+<div class="wrapper row1" style="background:#d9d9d9" >
+  <header id="header" class="clear"> 
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+      <h1 style="color:blue" >Leave Management System</h1>
+      <nav id="topbar" role="navigation" style="margin-bottom: 0;" class="navbar navbar-default navbar-static-top">
+                <div class="navbar-header">
+                    <button type="button" data-toggle="collapse" data-target=".sidebar-collapse" class="navbar-toggle"><span
+                            class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+                            class="icon-bar"></span><span class="icon-bar"></span></button>
+							
+                    <a id="logo" href="admin_home1.php" class="navbar-brand" style="font-size:19px">Leave Management System</a></div>
+                <div class="topbar-main"><a id="menu-toggle" href="#" class="btn hidden-xs"><i class="fa fa-bars"></i></a>
+				
+
+                    <ul class="nav navbar-top-links navbar-right">
+                 
+				 
+                        <li class="dropdown hi"><a data-toggle="dropdown" href="#" class="dropdown-toggle"><img
+                                src="images\user.jpg"	alt="" class="img-responsive img-circle"/>&nbsp;
+                           <?php
+			
+				$con=@mysql_connect("localhost","root","");
+			if(!$con){return false;}
+			if(!mysql_select_db("leave_man",$con)){return false;}
+			$usr=$_SESSION["username"];
+			$query="SELECT title,f_name,l_name FROM staff WHERE staff_id='$usr'";
+			$result=mysql_query($query);
+			$row=mysql_fetch_assoc($result);
+			echo  $row["title"] . " " . $row["f_name"] . " " . $row["l_name"] ;?>
+                            &nbsp;<span class="caret"></span></a>
+                            <ul class="dropdown-menu dropdown-user pull-right animated bounceInLeft">
+                                <li>
+                                    <div class="navbar-content">
+                                        <div class="row">
+                                            <div class="col-md-5 col-xs-5"><img
+                                                    src="images\user.jpg" alt=""
+                                                    class="img-responsive img-circle"/>
+
+                                                
+                                            </div>
+                                            <div class="col-md-7 col-xs-5"><h4><?php
+			
+				$con=@mysql_connect("localhost","root","");
+			if(!$con){return false;}
+			if(!mysql_select_db("leave_man",$con)){return false;}
+			$usr=$_SESSION["username"];
+			$query="SELECT title,f_name,l_name FROM staff WHERE staff_id='$usr'";
+			$result=mysql_query($query);
+			$row=mysql_fetch_assoc($result);
+			echo  $row["title"] . " " . $row["f_name"] . " " . $row["l_name"] ;?></h4>
+											<div class="divider"></div>
+
+                                               <div align="middle" ><a href="#" class="btn btn-primary btn btn-blue">Change
+                                                    Password</a></div>
+													<br>
+                                       <div align="middle">     <span class="input-group-btn"><a href="adminlogout.php" type="button" class="btn btn-green btn-sm">
+                                            Sign out
+                                        </a></span>
+
+										<br>				
+                                               
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+    </div>
+    <div class="fl_right">
+    </div>
+    <!-- ################################################################################################ --> 
+  </header>
+</div>
+<!-- ################################################################################################ --> 
+<div class="wrapper row2">
+  <div class="rounded">
+    <nav id="mainav" class="clear"> 
+      <!-- ################################################################################################ -->
+      <ul class="clear" width="100%">
+        <li class="active"><a style="color:blue" href="index.html">Home</a></li>
+        
+        <li><a style="color:blue" href="index1.html">Create user account</a></li>
+        <li><a style="color:blue" href="admin_report.php">Staff Leave Report</a></li>
+        <li><a style="color:blue" href="admin_graph.php">Graph</a></li>
+      </ul>
+     </nav>
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <div class="rounded">
+    <main class="container clear"> 
+      <!-- main body --> 
+      <!-- ################################################################################################ -->
+	   <div class="page-content" style="color:blue" align="center">
+				
+				
+				
+				
+				<div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="panel panel-green">
+                                            <div class="panel-heading"><h2 align="center">Create User Accounts</h2></div>
+                                            <div class="panel-body pan">
+                                                <form action="admin_create1.php" class="form-horizontal form-seperated " method="post">
+                                                    
+													<div class="form-body pal">	
+															 
+															<div class="form-group">
+															<h4 class="col-md-3 control-h4"><font color="black">Title</font><span class='require'>*</span> </h4>
+																<span class="col-md-9">
+																	<select class="form-control" name="title" style="width:100px" > 
+																	<option value="" selected="selected"></option>
+																	<option value="1" >Dr.</option>
+																	<option value="2" >Mrs</option>
+																	<option value="3" >Mr</option>
+																	<option value="4" >Ms</option>
+																	</select>
+																		<br>
+															</span>
+														
+														</div>
+														<br>
+                                                        <div class="form-group"><h4 for="inputUsername"
+                                                                                       class="col-md-3 control-h4"><font color="black">First Name</font>
+                                                            <span class='require'>*</span></h4>
+
+                                                            <div class="col-md-9">
+                                                                <div class="input-icon"><i class="fa fa-user"></i><input
+                                                                        name="fname" type="text"
+                                                                        placeholder="First name" class="form-control"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+														<br>
+												            <div class="form-group"><h4 
+                                                                                       class="col-md-3 control-h4"><font color="black">Last Name</font>
+                                                            <span class='require'>*</span></h4>
+
+                                                            <div class="col-md-9">
+                                                                <div class="input-icon"><i class="fa fa-user"></i><input
+                                                                        name="lname" type="text"
+                                                                        placeholder="Last name" class="form-control"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+														<br>
+														<div class="form-group">
+															<h4 class="col-md-3 control-h4"><font color="black">Gender</font><span class='require'>*</span> </h4>
+																<span class="col-md-9">
+																	<select class="form-control" name="gender" style="width:100px" > 
+																	<option value="" selected="selected"></option>
+																	<option value="1" >Male</option>
+																	<option value="2" >Female</option>													
+																	</select>
+																		<br>
+															</span>
+														
+														</div>
+														
+														<div class="form-group"><h4 
+                                                                                       class="col-md-3 control-h4"><font color="black">Designation</font>
+                                                            <span class='require'>*</span></h4>
+
+                                                            <div class="col-md-9">
+                                                                <div class="input-icon"><input
+                                                                        name="post" type="text"
+                                                                        placeholder="Designation" class="form-control"/>
+                                                                </div>
+                                                            </div>
+															<br>
+                                                        </div>
+																		<br>			
+																		<div class="form-group">
+															<h4 class="col-md-3 control-h4"><font color="black">Department</font><span class='require'>*</span> </h4>
+																<span class="col-md-9">
+																	<select class="form-control" name="dept" style="width:250px" > 
+																	<option value="" selected="selected"></option>
+																		<option value="10">Information Science & Engineering</option>											
+																	</select>
+																	<br>
+															</span>
+															
+														</div>
+														<br>
+													
+												        <div class="form-group">
+															<h4 class="col-md-3 control-h4"><font color="black">Teaching/Non-Teaching</font><span class='require'>*</span> </h4>
+															<span class="col-md-9">
+															<input name="teach"  type="radio" value="1" />
+															<label  class="choice" ><font color="black">Teaching</font></label>
+															&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+															<input name="teach"  type="radio" value="2" />
+															<label class="choice"><font color="black">Non-Teaching</font></label>
+															</span> 
+															<br>
+														</div>	
+															<br>
+														<div class="form-group">
+															<h4 class="col-md-3 control-h4" ><font color="black">Permanent/Temporary</font><span class='require'>*</span> </h4>
+															<span class="col-md-9">
+															<input name="perm"  type="radio" value="1" />
+															<label class="choice" ><font color="black">Permanent</font></label>
+															&nbsp; &nbsp;
+															<input name="perm"  type="radio" value="2" />
+
+															<label class="choice" ><font color="black">Temporary</font></label>
+															
+															</span> 
+															<br>
+														</div>			
+														<br>
+                                                        <div class="form-group"><h4 for="inputEmail"
+                                                                                       class="col-md-3 control-h4"><font color="black">Email</font>
+                                                            <span class='require'>*</span></h4>
+
+                                                            <div class="col-md-9">
+                                                                <div class="input-group"><span
+                                                                        class="input-group-addon"><i
+                                                                        class="fa fa-envelope"></i></span><input
+                                                                        type="email"
+																		name="email"		
+																		placeholder="Email Address"
+                                                                        class="form-control"/></div>
+                                                            </div>
+                                                        </div>
+													
+														<br>
+                                       	
+										
+										<div class="col-lg-12">
+                                        <div class="panel panel-green">
+                                            <div class="panel-heading">Account Details</div>
+                                            </div>
+											
+											<div class="form-group"><h4  class="col-md-3 control-h4"><font color="black">Username</font>
+                                                            <span class='require'>*</span></h4>
+
+                                                            <div class="col-md-9">
+                                                                <div class="input-group"><span
+                                                                        class="input-group-addon"><i class="fa fa-user"></i></span><input
+                                                                        type="text" placeholder="Username" 
+																		name="username"
+                                                                        class="form-control"/></div>
+                                                            </div>
+                                                        </div>
+											
+											<div class="form-group"><h4  class="col-md-3 control-h4"><font color="black">Password</font>
+                                                            <span class='require'>*</span></h4>
+
+                                                            <div class="col-md-9">
+                                                                <div class="input-group"><span
+                                                                        class="input-group-addon"></span><input
+                                                                        type="password" placeholder="Password" 
+																		name="password"
+                                                                        class="form-control"/></div>
+                                                            </div>
+                                                        </div>
+														
+														
+											
+											<div class="form-group"><h4  class="col-md-3 control-h4"><font color="black">Confirm Password</font>
+                                                            <span class='require'>*</span></h4>
+
+                                                            <div class="col-md-9">
+                                                                <div class="input-group"><span
+                                                                        class="input-group-addon"></span><input
+                                                                        type="password" placeholder="Confirm Password" 
+																		name="confirmPassword"
+                                                                        class="form-control"/></div>
+                                                            </div>
+                                                        </div>			
+														
+											
+												
+                                                    <div class="form-actions">
+                                                        <div class="col-md-offset-3 col-md-9">
+														<input id="saveForm" class="btn btn-orange btn-outlined" type="submit" name="submit" value="Submit" />
+			  
+                                                            
+                                                           
+                                                        </div>
+                                                    </div>
+													</div>
+                                                </form>
+
+                                    </div>
+                                </div>
+				
+				
+				
+				
+				
+				</div>
+      <!-- ################################################################################################ --> 
+      
+      <!-- ################################################################################################ --> 
+      <!-- / main body -->
+      <div class="clear"></div>
+    </main>
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="clear" style="background:black"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left" style="background:black" style="color:white">Copyright &copy; 2015 - All Rights Reserved - LMS</p>
+    <p class="fl_right"style="background:black" style="color:white" >Developed by <a style="background:black"  style="color:white" target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">Pooja & Prajnya</a></p>
+    <!-- ################################################################################################ --> 
+  </div>
+</div>
+<!-- JAVASCRIPTS --> 
+<script src="layout/scripts/jquery.min.js"></script> 
+<script src="layout/scripts/jquery.fitvids.min.js"></script> 
+<script src="layout/scripts/jquery.mobilemenu.js"></script> 
+<script src="layout/scripts/tabslet/jquery.tabslet.min.js"></script>
+</body>
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<!--loading bootstrap js-->
+<script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendors/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<script src="vendors/metisMenu/jquery.metisMenu.js"></script>
+<script src="vendors/slimScroll/jquery.slimscroll.js"></script>
+<script src="vendors/jquery-cookie/jquery.cookie.js"></script>
+<script src="js/jquery.menu.js"></script>
+<script src="vendors/jquery-pace/pace.min.js"></script>
+<!--LOADING SCRIPTS FOR PAGE-->
+<script src="vendors/fullcalendar/fullcalendar.min.js"></script>
+<?php
+
+
+
+			 /*$host="localhost"; // Host name or server name
+    $username="root"; // Mysql username
+    $password=""; // Mysql password
+    $db_name="leave_man"; // Database name
+    $tbl_name="leave_app"; // Table name
+    $con = mysqli_connect("$host", "$username", "$password","$db_name");
+    if (mysqli_connect_errno()) {
+        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    }
+	*/
+    //session_start();
+    $uname =  $_SESSION['username'];
+	//echo $uname;
+	 echo "<script>";
+
+    echo "$(document).ready(function() {";
+	
+	 echo "$('#calendar').fullCalendar({";
+
+    echo "header: {";
+    echo "left: 'prev,next today',";
+    echo "center: 'title',";
+    echo "right: 'month,agendaWeek,agendaDay'";
+    echo "},";
+	
+	
+
+	
+    $result = mysql_query("SELECT * FROM leave_app as a, staff as s WHERE a.staff_id=s.staff_id AND a.status!='Rejected'");
+
+    //$result1 = mysqli_query($con,"SELECT * FROM company;");
+    if(!$result)
+    {
+        echo "error";
+    }
+
+    echo "events: [";
+    while($db_field = mysql_fetch_assoc($result)) {
+        echo "{";
+        echo "title: '" . $db_field['f_name']." " .$db_field['l_name'] ."-"." ".$db_field['type'] ."-". $db_field['status'] ."',";
+        echo "start: '" . $db_field['start_date'] . "',";
+		echo "end: '" . $db_field['end_date'] . "'";
+   /*   echo "status:'" . $db_field['status'] . "'";
+      echo "url: '" . "company.php?name=" . $db_field['NAME'] . "',";
+        echo "package:'" . $db_field['PACKAGE'] . "',";
+        echo "cgpa:'" . $db_field['GPACUTOFF'] . "',";
+        echo "tenth:'" . $db_field['TENTHCUTOFF'] . "',";
+        echo "puc:'" . $db_field['PUCCUTOFF'] . "',";
+        echo "diploma:'" . $db_field['DIPLOMACUTOFF'] . "',";
+        echo "deadline:'" . $db_field['lastDateReg'] . "',";    */
+       
+	   echo "},";
+       
+    }
+    echo "],";
+	
+			//echo "eventColor: '#000',";
+	echo "eventColor: '#3a87ad'";
+
+   
+    echo "});";
+
+
+    echo "});";
+	
+
+    echo "</script>";
+    ?>	
+<script src="js/transitions.js"></script>
+<!--CORE JAVASCRIPT-->
+<script src="js/app.js"></script>
+<script src="js/main.js"></script>
+<script src="js/holder.js"></script>
+<script type="text/javascript">(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '../../../www.google-analytics.com/analytics.js', 'ga');
+ga('create', 'UA-145464-11', 'next-themes.com');
+ga('send', 'pageview');
+
+</script>
+
+</html>

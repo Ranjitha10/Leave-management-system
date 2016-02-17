@@ -1,0 +1,215 @@
+<html>
+    <head>
+		<title>Registration Details</title>
+		
+	<script type='text/javascript' >
+	function formsubmit()
+	{
+
+		var name = document.getElementById('name');
+		var dob = document.getElementById('dob');
+		var sex = document.getElementById('sex');
+		var yoa = document.getElementById('yoa');
+		var usn = document.getElementById('usn');
+		var e_id = document.getElementById('e_id');
+		var address = document.getElementById('address');
+		var mode = document.getElementById('mode');
+		var rank = document.getElementById('rank');
+		var f_name = document.getElementById('f_name');
+		var f_no = document.getElementById('f_no');
+		var f_id = document.getElementById('f_id');
+		var m_name = document.getElementById('m_name');
+		var m_no = document.getElementById('m_no');
+		var m_id = document.getElementById('m_id');
+		
+				
+		if (name.value == '' )
+		{
+			alert('Please enter your Name');
+			name.focus();
+			name.select();
+			return false;
+		}
+		
+		if (dob.value == '' )
+		{
+			alert('Please enter you Date of Birth');
+			dob.focus();
+			dob.select();
+			return false;
+		}
+		
+		if (sex.value != '-1' )
+		{
+				alert('Please select your Sex');
+				sex.focus();
+				sex.select();	
+				return false;
+		}
+		
+		if (yoa.value == '' )
+		{
+			alert('Please enter your Year of Admission');
+			yoa.focus();
+			yoa.select();
+			return false;
+		}
+		
+		if (usn.value == '' )
+		{
+			alert('Please enter your USN');
+			usn.focus();
+			usn.select();
+			return false;
+		}
+		
+		if (e_id.value == '' )
+		{
+			alert('Please enter your Email ID');
+			e_id.focus();
+			e_id.select();
+			return false;
+		}
+		
+		if (address.value == '' )
+		{
+			alert('Please enter your Email ID');
+			e_id.focus();
+			e_id.select();
+			return false;
+		}
+		
+		if (mode.value == '-1' )
+		{
+			alert('Please enter your Mode of Admission');
+			e_id.focus();
+			e_id.select();
+			return false;
+		}
+		
+		if (rank.value == '' )
+		{
+			alert('Please enter your Email ID');
+			e_id.focus();
+			e_id.select();
+			return false;
+		}
+		
+		if (f_name.value == '' )
+		{
+			alert("Please enter your Father's name");
+			f_name.focus();
+			f_name.select();
+			return false;
+		}
+		
+		if (f_no.value == '' )
+		{
+			alert("Please enter your Father's Phone no.");
+			f_no.focus();
+			f_no.select();
+			return false;
+		}
+		
+		if (f_id.value == '' )
+		{
+			alert("Please enter your Father's Email ID");
+			f_id.focus();
+			f_id.select();
+			return false;
+		}
+		
+		if (m_name.value == '' )
+		{
+			alert("Please enter your Mother's name");
+			m_name.focus();
+			m_name.select();
+			return false;
+		}
+		
+		if (m_no.value == '' )
+		{
+			alert("Please enter your Mother's Phone no.");
+			m_no.focus();
+			m_no.select();
+			return false;
+		}
+		
+		if (m_id.value == '' )
+		{
+			alert("Please enter your Mother's Email ID");
+			m_id.focus();
+			m_id.select();
+			return false;
+		}
+				
+	}
+</script>
+			
+    </head>
+        <br>
+		<br>
+		<br>
+     <body bgcolor="#0a7f99">
+	 
+<center>
+      <form method="post" action="abc.html" onSubmit=return formsubmit()>
+					<table>
+					<tr><td><b><font color="white" size=6>Enter the following details:</font></b></td></tr>
+					<tr><td><br></td></tr>
+					<tr><td><br></td></tr>
+					<tr><td><font color="white" size=5.8>Name:</font></td><td><input type="text" name="name"/></td></tr>
+								<tr><td><br></td></tr>
+					<tr><td><font color="white" size=5.8>DOB:</font></td><td><input type="date" name="dob"/></td></tr>
+								<tr><td><br></td></tr>
+					<tr><td><font color="white" size=5.8>Sex:</font></td><td><select type="text" name="sex"/>
+						<option value='-1'>Select</option> 
+						<option value='M'>Male</option>
+						<option value='F'>Female</option>
+					</select>
+						</td></tr>
+								<tr><td><br></td></tr>
+					<tr><td><font color="white" size=5.8>Year of Admission:</font></td><td><input type="date" name="yoa"/></td></tr>
+								<tr><td><br></td></tr>
+					<tr><td><font color="white" size=5.8>USN:</font></td><td><input type="text" name="usn"/></td></tr>
+								<tr><td><br></td></tr>
+					<tr><td><font color="white" size=5.8>Email ID:</font></td><td><input type="text" name="e_id"/></td></tr>	
+							<tr><td><br></td></tr>
+					<tr><td><font color="white" size=5.8>Address:</font></td><td><input type="text" name="address"/></td></tr>	
+							<tr><td><br></td></tr>
+					<tr><td><font color="white" size=5.8>Mode of Admission :</font></td><td><select id="text" name="mode"/>
+					 
+						<option value='-1'>Select</option> 
+						<option value='CET'>CET</option>
+						<option value='COMEDK'>COMEDK</option>
+						<option value='MQ'>MQ</option>
+					</select>
+							</td></tr>
+								<tr><td><br></td></tr>
+					<tr><td><font color="white" size=5.8>Rank:</font></td><td><input type="text" name="rank"/></td></tr>
+								<tr><td><br></td></tr>
+					<tr><td><font color="white" size=5.8>Father's Name:</font></td><td><input type="text" name="f_name"/></td></tr>	
+							<tr><td><br></td></tr>
+					<tr><td><font color="white" size=5.8>Father's Contact No.:</font></td><td><input type="text" name="f_no"/></td></tr>	
+							<tr><td><br></td></tr>
+					<tr><td><font color="white" size=5.8>Father's Email ID:</font></td><td><input type="text" name="f_id"/></td></tr>	
+							<tr><td><br></td></tr>
+					<tr><td><font color="white" size=5.8>Mother's Name:</font></td><td><input type="text" name="m_name"/></td></tr>	
+							<tr><td><br></td></tr>
+					<tr><td><font color="white" size=5.8>Mother's Contact No.:</font></td><td><input type="text" name="m_no"/></td></tr>	
+							<tr><td><br></td></tr>
+					<tr><td><font color="white" size=5.8>Mother's Email ID:</font></td><td><input type="text" name="m_id"/></td></tr>	
+							<tr><td><br></td></tr>
+							<tr><td><br></td></tr>
+					<tr><td>      </td><td><input type="submit" value="Submit"></td></tr>
+					
+					</table>
+					</form>		
+					</center>          
+   
+
+<br>
+    <br>
+    <br>
+    </body>
+</html>

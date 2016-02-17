@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>
+			Welcome Page
+		</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+	<div id="outer">
+	<div id="header">
+			
+				<div id="logo">
+					<h1>
+						Counsellor Detail Management
+					</h1>
+
+				</div>	
+		</div>
+		<div id="header">
+		<div id="nav">
+					<ul>
+						<li class="first">
+							<a href="hod_login.html">HOD</a>
+						</li>
+						<li>
+							<a href="counsellor_login.html">counsellor</a>
+						</li>
+						<li>
+							<a href="student_login.html">student</a>
+						</li>
+						
+					</ul>
+				</div>
+
+		</div>
+		
+			<div id="banner">
+				<img src="ab.jpeg" alt="RVCE" />
+			</div>
+			
+			
+</div>
+</div>
+</body>
+</html>

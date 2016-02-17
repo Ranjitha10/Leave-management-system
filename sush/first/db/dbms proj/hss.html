@@ -1,0 +1,96 @@
+<html>
+    <head>
+		<title>HSS Details</title>
+		
+	<script type='text/javascript' >
+	function formsubmit()
+	{
+
+		var e_name = document.getElementById('e_name');
+		var s_date = document.getElementById('s_date');
+		var e_date = document.getElementById('e_date');
+		var category = document.getElementById('category');
+		
+				
+		if (e_name.value == '' )
+		{
+			alert('Please enter the event name');
+			e_name.focus();
+			e_name.select();
+			return false;
+		}
+		
+		if (s_date.value == '' )
+		{
+			alert('Please select start date of the event');
+			s_date.focus();
+			s_date.select();
+			return false;
+		}
+		
+		if (e_date.value == '' )
+		{
+			alert('Please select end date of the event');
+			e_date.focus();
+			e_date.select();
+			return false;
+		}
+		
+		if (category.value == '-1' )
+		{
+				alert('Please select a category');
+				category.focus();
+				category.select();	
+				return false;
+		}
+			
+	}
+</script>
+			
+    </head>
+        <br>
+		<br>
+		<br>
+		<br>
+		<br>
+     <body bgcolor="#0a7f99">
+	 
+<center>
+      <form method="post" action="abc.html" onSubmit=return formsubmit()>
+					<table>
+					<tr><td><b><font color="white" size=6>HSS details:</font></b></td></tr>
+					<tr><td><br></td></tr>
+					<tr><td><br></td></tr>
+					<tr><td><font color="white" size=5.8>Event name :</font></td><td><input type="text" name="e_name"/></td></tr>
+								<tr><td><br></td></tr>
+					<tr><td><font color="white" size=5.8>From :</font></td><td><input type="date" name="s_date"/></td></tr>
+								<tr><td><br></td></tr>
+					<tr><td><font color="white" size=5.8>To :</font></td><td><input type="date" name="e_date"/></td></tr>
+								<tr><td><br></td></tr>
+					<tr><td><font color="white" size=5.8>Category :</font></td><td><select id="text" name="category"/>
+					 
+						<option value='-1'>Select</option> 
+						<option value='Internship'>Internship</option>
+						<option value='Training'>Training</option>
+						<option value='Workshop'>Workshop</option>
+						<option value='NCC'>NCC</option>
+						<option value='Paper presentation'>Paper presentation</option>
+						<option value='Coordinating an event'>Coordinating the event</option>
+						<option value='Participating in the event'>Participating in the event</option>
+						<option value='Others'>Others</option>
+					</select>
+							</td></tr>	
+							<tr><td><br></td></tr>
+							<tr><td><br></td></tr>
+					<tr><td>      </td><td><input type="submit" value="Submit"></td></tr>
+					
+					</table>
+					</form>		
+					</center>          
+   
+
+<br>
+    <br>
+    <br>
+    </body>
+</html>

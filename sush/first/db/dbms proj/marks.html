@@ -1,0 +1,92 @@
+<html>
+    <head>
+		<title>Marks Details</title>
+		
+	<script type='text/javascript' >
+	function formsubmit()
+	{
+
+		var usn = document.getElementById('usn');
+		var sem = document.getElementById('sem');
+		var sub = document.getElementById('sub');
+		var cie1 = document.getElementById('cie1');
+		var cie2 = document.getElementById('cie2');
+		var cie3 = document.getElementById('cie3');
+				
+		if (usn.value == '' )
+		{
+			alert('Please enter USN of the student');
+			e_name.focus();
+			e_name.select();
+			return false;
+		}
+		
+		if (sem.value == -1)
+		{
+			alert('Please enter semester to which the student belongs');
+			sem.focus();
+			sem.select();
+			return false;
+		}
+		
+		if (sub.value == '' )
+		{
+			alert('Please enter subject code');
+			sub.focus();
+			sub.select();
+			return false;
+		}
+			
+	}
+</script>
+			
+    </head>
+        <br>
+		<br>
+		<br>
+		<br>
+		<br>
+     <body bgcolor="#0a7f99">
+	 
+<center>
+      <form method="post" action="abc.html" onSubmit=return formsubmit()>
+					<table>
+					<tr><td><b><font color="white" size=6>CIE Marks:</font></b></td></tr>
+					<tr><td><br></td></tr>
+					<tr><td><br></td></tr>
+					<tr><td><font color="white" size=5.8>USN :</font></td><td><input type="text" name="usn"/></td></tr>
+								<tr><td><br></td></tr>
+					<tr><td><font color="white" size=5.8>Semester :</font></td><td><select type="integer" name="sem"/>
+						<option value='-1'>Select</option> 
+						<option value=1>1</option>
+						<option value=2>2</option>
+						<option value=3>3</option>
+						<option value=4>4</option>
+						<option value=5>5</option>
+						<option value=6>6</option>
+						<option value=7>7</option>
+						<option value=8>8</option>
+					</select>
+					</td></tr>
+								<tr><td><br></td></tr>
+					<tr><td><font color="white" size=5.8>Subject Code :</font></td><td><input type="text" name="sub"/></td></tr>
+								<tr><td><br></td></tr>
+					<tr><td><font color="white" size=5.8>CIE 1 :</font></td><td><input type="text" name="cie1"/></td></tr>
+								<tr><td><br></td></tr>
+					<tr><td><font color="white" size=5.8>CIE 2 :</font></td><td><input type="text" name="cie2"/></td></tr>
+								<tr><td><br></td></tr>
+					<tr><td><font color="white" size=5.8>CIE 3 :</font></td><td><input type="text" name="cie3"/></td></tr>
+								<tr><td><br></td></tr>			
+							<tr><td><br></td></tr>
+							<tr><td><br></td></tr>
+					<tr><td>      </td><td><input type="submit" value="Submit"></td></tr>
+					
+					</table>
+					</form>		
+					</center>          
+ 
+<br>
+    <br>
+    <br>
+    </body>
+</html>
